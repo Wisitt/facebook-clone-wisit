@@ -1,0 +1,162 @@
+$primary-color: #272728;
+$secondary-color: #fff;
+$search-color: #3A3B3C;
+
+.navbar {
+  background-color: $primary-color;
+  color: $secondary-color;
+  height: 60px;
+  border-bottom: 1px solid $search-color;
+  display: flex; /* เพิ่มบรรทัดนี้ */
+  justify-content: space-between; /* เพิ่มบรรทัดนี้ */
+  align-items: center; /* เพิ่มบรรทัดนี้ */
+  padding: 0 10px; /* เพิ่มบรรทัดนี้ */
+
+  .search-container {
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 20px;
+    background-color: $search-color;
+    height: 40px;
+    width: 280px;
+    padding: 5px 10px;
+    gap: 8px;
+    margin-right: auto;
+    @media (max-width: 993px) {
+      position: absolute;
+      left: 70px;
+      top: 25px;
+      width: 40px;
+      height: 40px;
+    }
+
+    input {
+      border: none;
+      outline: none;
+      background-color: transparent;
+      width: 220px;
+      font-size: 16px;
+      color: $secondary-color;
+    }
+  }
+
+  .navbar-brand {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+
+  .navbar-menu2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+    color: $primary-color;
+    font-weight: bold;
+    cursor: pointer;
+
+    span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #3A3B3C;
+      color: #E4E6EB;
+      height: 45px;
+      width: 45px;
+      border-radius: 50%;
+
+      &:hover {
+        background-color: #5a5d60;
+      }
+    }
+  }
+  .menu {
+    margin-right: 10px;
+  }
+  .nav-link {
+    height: 50px;
+    width: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $secondary-color;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 8px;
+    color: #B8BBBF;
+    &:hover {
+      background-color: #3A3B3C;
+      border-radius: 8px;
+      height: 50px;
+    }
+    &.active {
+      color: #2E89FF;
+      border-bottom: 3.2px solid #2E89FF;
+      border-radius: 0;
+    }
+    .icon-active {
+      color: #2E89FF;
+      border-radius: 0;
+    }
+  }
+}
+
+.navbar-collapse {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.navbar-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar-nav {
+    gap: 10px;
+    font-size: 14px;
+  }
+
+  .navbar-menu2 {
+    gap: 5px;
+    width: 150px;
+    font-size: 14px;
+  }
+}
+
+
+@media (max-width: 1179px) {
+  .navbar-collapse {
+    display: none;
+  }
+  .navbar-menu2 {
+    margin-right: 10px;
+  }
+  .search-container {
+    width: 200px;
+  }
+  .navbar-brand {
+    margin-right: 5px;
+  }
+  .navbar-menu2 span {
+    height: 35px;
+    width: 35px;
+  }
+}
+
+@media (max-width: 993px) {
+  .navbar {
+    height: 74px;
+  }
+
+  .search-container input {
+    display: none;
+  }
+
+}
+

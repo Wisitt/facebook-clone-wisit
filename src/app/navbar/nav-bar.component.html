@@ -1,0 +1,57 @@
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <a class="navbar-brand" href="#">
+    <icon-facebook></icon-facebook>
+  </a>
+  <div class="search-container">
+    <icon-search style="color: #B0B3B8; margin-left: 2px;"></icon-search>
+    <input placeholder="ค้นหาบน Facebook:">
+  </div>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <div class="navbar-nav ">
+      <div class="nav-item">
+        <a class="nav-link" href="#" (click)="active(0)" [ngClass]="{'active': activeNavIndex === 0}">
+          <icon-home *ngIf="activeNavIndex !== 0"></icon-home>
+          <icon-home-active *ngIf="activeNavIndex === 0" class="icon-active"></icon-home-active>
+        </a>
+      </div>
+      <div class="nav-item">
+        <a class="nav-link" href="#" (click)="active(1)" [ngClass]="{'active': activeNavIndex === 1}">
+          <icon-watch *ngIf="activeNavIndex !== 1"></icon-watch>
+          <icon-watch-active *ngIf="activeNavIndex === 1" class="icon-active"></icon-watch-active>
+        </a>
+      </div>
+      <div class="nav-item">
+        <a class="nav-link" href="#" (click)="active(2)" [ngClass]="{'active': activeNavIndex === 2}">
+          <icon-marketplace *ngIf="activeNavIndex !== 2"></icon-marketplace>
+          <icon-marketplace-active *ngIf="activeNavIndex === 2" class="icon-active"></icon-marketplace-active>
+        </a>
+      </div>
+      <div class="nav-item">
+        <a class="nav-link" href="#" (click)="active(3)" [ngClass]="{'active': activeNavIndex === 3}">
+          <icon-group *ngIf="activeNavIndex !== 3"></icon-group>
+          <icon-group-active *ngIf="activeNavIndex === 3" class="icon-active"></icon-group-active>
+        </a>
+      </div>
+      <div class="nav-item">
+        <a class="nav-link" href="#" (click)="active(4)" [ngClass]="{'active': activeNavIndex === 4}">
+          <icon-game *ngIf="activeNavIndex !== 4"></icon-game>
+          <icon-game-active *ngIf="activeNavIndex === 4" class="icon-active"></icon-game-active>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="navbar-menu2 mx-1">
+    <span><icon-menu></icon-menu></span>
+    <span><icon-message></icon-message></span>
+    <span><icon-notify></icon-notify></span>
+    <span><img
+      src="https://picsum.photos/100/300"
+        alt="Facebook Image" style="height: 45px; width: 45px; border-radius: 50%;">
+    </span>
+  </div>
+</nav>
